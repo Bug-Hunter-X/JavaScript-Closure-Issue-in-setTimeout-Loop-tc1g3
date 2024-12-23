@@ -1,0 +1,3 @@
+# JavaScript Closure Issue in setTimeout Loop
+
+This repository demonstrates a common closure-related issue in JavaScript when using `setTimeout` within a loop.  The expected behavior is to print numbers 0 through 9, each after a one-second delay. However, due to how closures work in JavaScript, the loop completes before the `setTimeout` callbacks execute, and they all capture the final value of `i` (which is 10).  The solution demonstrates how to properly capture the value of `i` using an immediately invoked function expression (IIFE).
